@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admission - KP Rose Valley School</title>
+
+<style>
+body{
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:#f5f9ff;
+}
+
+/* TOP NOTICE */
+.notice{
+  background:linear-gradient(90deg,#ffcc00,#ff9900);
+  color:#000;
+  padding:10px;
+  text-align:center;
+  font-weight:bold;
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:1000;
+}
+
+/* MENU BUTTON */
+.menu-btn{
+  position:fixed;
+  top:70px;
+  right:20px;
+  background:#fff;
+  padding:12px;
+  border-radius:12px;
+  cursor:pointer;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  z-index:1001;
+}
+
+.menu-btn div{
+  width:25px;
+  height:3px;
+  background:#007bff;
+  margin:5px 0;
+}
+
+/* SIDE MENU */
+.side-menu{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:260px;
+  height:100%;
+  background:linear-gradient(180deg,#004aad,#00c6ff);
+  padding-top:80px;
+  transition:0.4s;
+  z-index:1000;
+}
+
+.side-menu a{
+  display:block;
+  margin:15px;
+  padding:15px;
+  color:#fff;
+  text-decoration:none;
+  background:rgba(255,255,255,0.1);
+  border-radius:10px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.side-menu a:hover{
+  background:#fff;
+  color:#004aad;
+}
+
+/* HERO */
+.hero{
+  margin-top:80px;
+  height:70vh;
+  background:url('about.jpg') center/cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:40px;
+  background:rgba(0,0,0,0.5);
+  padding:20px;
+  border-radius:10px;
+}
+
+/* SECTION */
+.section{
+  padding:50px 20px;
+  text-align:center;
+}
+
+.box{
+  background:#fff;
+  padding:25px;
+  margin:20px auto;
+  max-width:800px;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* FEES */
+.fees div{
+  padding:10px;
+  border-bottom:1px solid #ddd;
+}
+
+/* BUTTON */
+.btn{
+  background:#ffcc00;
+  padding:15px 25px;
+  border:none;
+  border-radius:30px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#ffaa00;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:15px;
+  border-radius:50%;
+  font-size:20px;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NOTICE -->
+<div class="notice">
+Admissions Open (20 Feb - 20 July) | Call: +91 9450683025
+</div>
+
+<!-- MENU BUTTON -->
+<div class="menu-btn" onclick="toggleMenu()">
+<div></div>
+<div></div>
+<div></div>
+</div>
+
+<!-- SIDE MENU -->
+<div class="side-menu" id="menu">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="admission.html">Admission</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Admission Open 2026-27</h1>
+</div>
+
+<!-- PROCESS -->
+<div class="section">
+<h2>Admission Process</h2>
+
+<div class="box">Fill Admission Form</div>
+<div class="box">Submit Documents</div>
+<div class="box">Confirmation Call</div>
+<div class="box">Admission Complete</div>
+
+</div>
+
+<!-- FEES -->
+<div class="section">
+<h2>Fee Structure</h2>
+
+<div class="box fees">
+<div>Nur - UKG : ₹800</div>
+<div>Class 1 - 5 : ₹900</div>
+<div>Class 6 - 8 : ₹1000</div>
+<div>Admission Fee : ₹2500</div>
+<div>Annual Charge : ₹1500 (Tie, Belt, ID, Diary)</div>
+</div>
+
+</div>
+
+<!-- DOWNLOAD -->
+<div class="section">
+<h2>Admission Form</h2>
+
+<a href="admission-form.pdf" download>
+<button class="btn">Download Form</button>
+</a>
+
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/919450683025" class="whatsapp">💬</a>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").style.right =
+  document.getElementById("menu").style.right === "0px" ? "-100%" : "0px";
+}
+
+/* CLICK OUTSIDE CLOSE */
+document.addEventListener('click', function(e){
+  let menu = document.getElementById("menu");
+  let btn = document.querySelector(".menu-btn");
+
+  if(!menu.contains(e.target) && !btn.contains(e.target)){
+    menu.style.right = "-100%";
+  }
+});
+</script>
+
+</body>
+</html>
