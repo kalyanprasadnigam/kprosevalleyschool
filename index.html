@@ -1,39 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KP Rose Valley School</title>
-  <link rel="icon" type="image/png" href="/apple-touch-icon.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>KP Rose Valley School</title>
 
-<link rel="icon" type="image/png" sizes="48x48" href="https://kprosevalleyschool.edu.in/apple-touch-icon.png">
+<!-- FAVICON -->
+<link rel="icon" type="image/png" sizes="48x48" href="/apple-touch-icon.png">
+<link rel="shortcut icon" type="image/png" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-<link rel="apple-touch-icon" href="https://kprosevalleyschool.edu.in/apple-touch-icon.png">
-
+<!-- CANONICAL -->
 <link rel="canonical" href="https://kprosevalleyschool.edu.in/">
 
+<!-- FONT AWESOME -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
-<style>
-*{
-  <link rel="icon" type="image/png" sizes="48x48" href="https://kprosevalleyschool.edu.in/apple-touch-icon.png">
-<link rel="apple-touch-icon" href="https://kprosevalleyschool.edu.in/apple-touch-icon.png">
-<link rel="canonical" href="https://kprosevalleyschool.edu.in/" />
-  
 margin:0;
 padding:0;
 box-sizing:border-box;
@@ -417,172 +404,6 @@ font-size:38px;
 width:290px;
 }
 }
+
 </style>
 </head>
-
-<body>
-
-<!-- LOADER -->
-<div id="loader">
-<img src="logo.png">
-<h1>KP Rose Valley School</h1>
-</div>
-
-<!-- NOTICE -->
-<div class="notice">
-<marquee scrollamount="7" id="adNotice"></marquee>
-</div>
-
-<!-- MENU -->
-<div class="hamburger" onclick="openMenu()">
-<span></span>
-<span></span>
-<span></span>
-</div>
-
-<div class="overlay" id="overlay" onclick="closeMenu()"></div>
-
-<div class="sidebar" id="menu">
-
-<div class="menu-top">
-<img src="logo.png">
-<h2>KP Rose Valley School</h2>
-</div>
-
-<a href="index.html"><i class="fas fa-house"></i> Home</a>
-<a href="about.html"><i class="fas fa-school"></i> About</a>
-<a href="admission.html"><i class="fas fa-user-graduate"></i> Admission</a>
-<a href="gallery.html"><i class="fas fa-image"></i> Gallery</a>
-<a href="contact.html"><i class="fas fa-phone"></i> Contact</a>
-
-</div>
-
-<!-- HERO -->
-<section class="hero">
-<div class="hero-content">
-<h1>Building Confident Learners For Tomorrow</h1>
-<p>
-Excellence in education, discipline, values and future success at KP Rose Valley School Deoria.
-</p>
-
-<div class="hero-buttons">
-<a href="admission.html" class="btn1">Apply Now</a>
-<a href="about.html" class="btn2">Explore More</a>
-</div>
-
-</div>
-</section>
-
-<!-- FEATURES -->
-<section class="section">
-<h2 class="title">Why Choose Us</h2>
-<div class="line"></div>
-
-<div class="grid">
-
-<div class="card">
-<i class="fas fa-graduation-cap"></i>
-<h3>Academic Excellence</h3>
-<p>Modern curriculum with excellent results.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-user-tie"></i>
-<h3>Expert Teachers</h3>
-<p>Dedicated teachers guiding every child.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-shield-halved"></i>
-<h3>Safe Campus</h3>
-<p>Secure environment with discipline and care.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-trophy"></i>
-<h3>Sports & Events</h3>
-<p>Holistic growth through activities and sports.</p>
-</div>
-
-</div>
-</section>
-
-<!-- REVIEW -->
-<section class="review">
-<p>
-"KP Rose Valley School has transformed our child's confidence, discipline and academic growth."
-</p>
-<h3>- Happy Parents</h3>
-</section>
-
-<footer>
-© 2026 KP Rose Valley School. All Rights Reserved.
-</footer>
-
-<!-- FLOAT -->
-<a href="#" class="float-top" id="topBtn"><i class="fas fa-arrow-up"></i></a>
-
-<a href="https://wa.me/919450683025" class="float-wa" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<script>
-function openMenu(){
-document.getElementById("menu").classList.add("active");
-document.getElementById("overlay").classList.add("show");
-}
-
-function closeMenu(){
-document.getElementById("menu").classList.remove("active");
-document.getElementById("overlay").classList.remove("show");
-}
-
-window.addEventListener("scroll",function(){
-let btn=document.getElementById("topBtn");
-if(window.scrollY>300){
-btn.classList.add("show");
-}else{
-btn.classList.remove("show");
-}
-});
-
-window.onload=function(){
-setTimeout(function(){
-document.getElementById("loader").style.opacity="0";
-document.getElementById("loader").style.visibility="hidden";
-},1600);
-updateAdmissionNotice();
-}
-
-/* AUTO NOTICE */
-function updateAdmissionNotice(){
-
-let today=new Date();
-let year=today.getFullYear();
-
-let start=new Date(year,1,20);
-let end=new Date(year,6,20);
-
-let notice=document.getElementById("adNotice");
-
-if(today>=start && today<=end){
-
-notice.innerHTML=
-"Admissions Open For Session " + year + "-" + (year+1) +
-" | Contact: +91 9125806276, 9450683025 | Excellence In Education At KP Rose Valley School Deoria";
-
-}else{
-
-let nextYear=today>end ? year+1 : year;
-
-notice.innerHTML=
-"Admissions Closed | Next Admission Starts 20 February " + nextYear +
-" | Contact: +91 9125806276, 9450683025";
-
-} 
-
-}
-</script>
-
-</body>
-</html>
